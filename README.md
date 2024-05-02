@@ -43,7 +43,7 @@ We observe that in the review dataset, many reviews are centered around ‘pumpk
 **4. Sentiment Analysis**\
 Precise sentiment analysis plays a crucial part in helping businesses refine their services. However, it is quite a challenge to train a well-functional deep learning model from scratch since we have 7 million reviews and limited computational power as well as hardware. Therefore, using a pre-trained model is a commercial and feasible resolution.
 
-The pre-trained model I picked was 'sentimentdl_use_imdb' from Spark NLP. It is trained on classifying IMDB reviews into negative, positive, and neutral categories using `Universal Sentence Encoder`. The reason for choosing this model is because the length and tone of IBDM reviews are very similar to Yelp reviews. After applying the pre-trained model, I did the following analysis:
+The pre-trained model I picked was 'sentimentdl_use_imdb' from Spark NLP. It is trained on classifying IMDb reviews into negative, positive, and neutral categories using `Universal Sentence Encoder`. The reason for choosing this model is because the length and tone of IMDb reviews are very similar to Yelp reviews. After applying the pre-trained model, I did the following analysis:
 
 First, I want to see how many reviews fall into each category of sentiment:
 
