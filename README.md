@@ -9,7 +9,7 @@ Source: https://www.yelp.com/dataset/documentation/main
 **1. Research on third-party libraries**\
 Since our data contains 7 millions reviews, NLP becomes the most important aspect of our analysis. However, Spark MLlib only offers limited and lower level NLP features such as tokenizer, StopwordsRemover, etc. Applying higher level NLP techniques with high efficiency becomes the biggest challenge in our project. After researching on third party libraries, I decided to use Spark NLP, which is an open-source NLP library developed by John Snow Labs. Spark NLP is built on top of Apache Spark and TensorFlow and offers a range of higher level features such as normalizer, stemmer, lemmatizer, pre-trained language models, LLM embeddings, etc.
 
-![示例图片](images/Spark NLP v.s. Spark MLlib.png)
+![示例图片](images/Spark_NLP_vs_ Spark_MLlib.png)
 
 **2. Prepare data and create PySpark cluster in Dataproc**\
 First, I download the data from Yelp and upload to the Cloud Storage on GCP(Google Cloud Platform). To use Spark NLP, I configured the cluster using the cloud shell by referring to https://github.com/JohnSnowLabs/spark-nlp/tree/master/python#gcp-dataproc:
