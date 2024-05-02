@@ -34,7 +34,8 @@ gcloud dataproc clusters create <cluster_name> \
 **3. Topic modeling**\
 In general, topic modeling refers to the broad task of assigning topics to unlabeled text documents, and the model I pick is the Latent Dirichlet Allocation(LDA), which is a generative probabilistic model that takes Bag of Words or TF-IDF as input, finds groups of words that appear frequently together across different documents, and output probabilistic distribution of the topics.
 
-Before building the model, I first remove special characters from the text. Then, I filtered the reviews and tips for Starbucks to demonstrate how to generate insights for businesses by topic modeling. After training the model, I extracted 5 terms as the topic for each document and created a word cloud: 
+Before building the model, I first remove special characters from the text. Then, I filtered the reviews and tips for Starbucks to demonstrate how to generate insights for businesses by topic modeling. After training the model, I extracted 5 terms as the topic for each document and created a word cloud:
+
 ![示例图片](images/topic_modeling.png)
 
 We observe that in the review dataset, many reviews are centered around ‘pumpkin spice’ and ‘nitro brew’. So, we would recommend Starbucks pay special attention to the reviews of these two products. In the tip dataset, there are many tips centered around ‘wifi’, ‘park’, ‘free’, and ‘slow’, so we can help Starbucks to develop business strategies such as improving app ordering services and providing free wifi to keep and attract customers.
@@ -45,6 +46,7 @@ Precise sentiment analysis plays a crucial part in helping businesses refine the
 The pre-trained model I picked was 'sentimentdl_use_imdb' from Spark NLP. It is trained on classifying IMDB reviews into negative, positive, and neutral categories using `Universal Sentence Encoder`. The reason for choosing this model is because the length and tone of IBDM reviews are very similar to Yelp reviews. After applying the pre-trained model, I did the following analysis:
 
 First, I want to see how many reviews fall into each category of sentiment:
+
 ![示例图片](images/sentiment_reviews.png)
 - positive reviews are the most common
 - negative reviews are about 1/3 of positive reviews
