@@ -3,7 +3,7 @@
 
 The Yelp dataset consists of 5 JSON files: business (113.4MB), review (4.98GB), tip (172.2MB), user (3.13GB), and checkin (273.7MB), covering 150,346 businesses, 6,990,280 reviews, 908,915 tips by 1,987,897 users, and aggregated check-ins over time for each of the 131,930 businesses. The purpose of this project is to derive insights from the dataset to help businesses improve their services.
 
-Dat source: https://www.yelp.com/dataset/documentation/main
+Data source: https://www.yelp.com/dataset/documentation/main
 
 # What I did
 **1. Research on third-party libraries**\
