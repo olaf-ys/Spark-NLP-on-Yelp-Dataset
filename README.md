@@ -42,4 +42,34 @@ We observe that in the review dataset, many reviews are centered around ‘pumpk
 **4. Sentiment Analysis**\
 Precise sentiment analysis plays a crucial part in helping business refining their services. However, it is quite a challenge to train a well functional deep learning model from strach since we have 7 million reviews and limited computational power as well as hardware. Therefore, using a pre-trained model is a commercial and feasible resoluation.
 
-The pre-trained model I picked was 'sentimentdl_use_imdb' from Spark NLP. It is trained on classifying IMDB reviews in negative, positive, and neutral categories using `Universal Sentence Encoder`. Reason for choosing this model is because the length and tone of IBDM reviews are very similar to Yelp reviews. After applying the pre-trained model, I created the following visualizations:
+The pre-trained model I picked was 'sentimentdl_use_imdb' from Spark NLP. It is trained on classifying IMDB reviews in negative, positive, and neutral categories using `Universal Sentence Encoder`. Reason for choosing this model is because the length and tone of IBDM reviews are very similar to Yelp reviews. After applying the pre-trained model, I did the following analysis:
+
+First, I want to see the how many reviews fall into each category of the sentiment:
+![示例图片](images/sentiment_reviews.png)
+- positive reviews are the most common
+- negative reviews are about 1/3 of positive reviews
+- neutral reviews are the least common
+
+Now, I want to investigate into the relationship between stars and sentiment:
+
+![示例图片](images/stars_positive.png)
+
+Like what I have expected, customers that gives positive reviews are very likely to give high stars(4 or 5). However, lower stars can still be given to the business since sentiment only represents a general emotional tendency. For instance, let's take a look at the following review:
+
+'If you decide to eat here just be aware it is going to take about 2 hours from beginning to end We have tried it multiple times because I want to like it! I have been to its other locations in NJ and never had a bad experience The food is good but it takes a very long time to come out The waitstaff is very young but usually pleasant We have just had too many experiences where we spent way too long waiting We usually opt for another diner or restaurant on the weekends in order to be done quicker'.
+
+Although there is disatisfication (the customer complaining about long waiting time) in the review, the model considered its sentiment as positive since compliments (food is delicious) outweights disatisfication. However, the customer only gave 3 stars to the restuarant due to disatisfication. Therefore, although positive reviews often corresponds to higher stars, positive reviews with low stars are where valuable insights for service improvements lie.
+
+![示例图片](images/stars_negative.png)
+
+Likewise, negative sentiment, in general, corresponds to low stars
+
+![示例图片](images/stars_neutral.png)
+
+The stars given are more evenly distributed for neutral reviews. From the stars distribution based on sentiment categories, we can verify that the pre-trained model assigns relatively accurate sentiment labels.
+
+**4. Conclusion**\
+Our tour with Spark NLP begins with topic modeling, which is a useful tool for businesses to pinpoint review topics and understand what are products that receives most customers' attention and identify aspects of services they should improve upon. In our analysis, I used Starbucks as an example, recommanding Starbucks to look into reviews of 'pumpkin spcie' and 'nitro brew' and understand why these two products get many comments. Moreover, I performed topic modeling on tips for Starbucks, helping Starbucks identify aspects of services such as 'wifi', 'park', 'free', 'slow' that it should pay more attention to. 
+
+Then, I performed sentiment analysis using a pre-trained model from Spark NLP. The model is trained on classifying IMDB reviews into positive, negative, and neutral. From the result, I observe that positive reviews are mostly accompanied by 4 and 5 stars rating; negative reviews are mostly accompanied by 1 and 2 stars rating; neutral reviews are accompanied by approximately even chances of rating from 1 to 5 stars. Further, I used a review example to illustrate why postive reivews with low stars can be where valuable business insights lie and vice versa.
+
