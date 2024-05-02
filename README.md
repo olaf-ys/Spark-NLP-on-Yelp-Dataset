@@ -38,7 +38,7 @@ Before building the model, I first remove special characters from the text. Then
 
 ![示例图片](images/topic_modeling.png)
 
-We observe that in the review dataset, many reviews are centered around ‘pumpkin spice’ and ‘nitro brew’. So, we would recommend Starbucks to pay special attention to the reviews of these two products. In the tip dataset, there are many tips centered around ‘wifi’, ‘park’, ‘free’, and ‘slow’, so we can help Starbucks to develop business strategies such as improving app ordering services and providing free wifi to keep and attract customers.
+I observe that in the review dataset, many reviews are centered around ‘pumpkin spice’ and ‘nitro brew’. So, I would recommend Starbucks to pay special attention to the reviews of these two products. In the tip dataset, there are many tips centered around ‘wifi’, ‘park’, ‘free’, and ‘slow’, so I would help Starbucks to develop business strategies such as improving app ordering services and providing free wifi to keep and attract customers.
 
 **4. Sentiment Analysis**\
 Precise sentiment analysis plays a crucial part in helping businesses refine their services. However, it is quite a challenge to train a well-functional deep learning model from scratch since we have 7 million reviews and limited computational power as well as hardware. Therefore, using a pre-trained model is a commercial and feasible resolution.
