@@ -56,7 +56,7 @@ Now, I want to investigate the relationship between stars and sentiment:
 
 ![示例图片](images/stars_positive.png)
 
-Like expected, customers who give positive reviews are likely to give high stars(4 or 5). However, lower stars can still be given to the business since sentiment only represents a general emotional tendency. For instance, let's take a look at the following review:
+Like expected, customers who give positive reviews are likely to give higher stars (4 or 5). However, lower stars can still be given to the business since sentiment only represents a general emotional tendency. For instance, let's take a look at the following review:
 
 'If you decide to eat here just be aware it is going to take about 2 hours from beginning to end We have tried it multiple times because I want to like it! I have been to its other locations in NJ and never had a bad experience The food is good but it takes a very long time to come out The waitstaff is very young but usually pleasant We have just had too many experiences where we spent way too long waiting We usually opt for another diner or restaurant on the weekends in order to be done quicker'.
 
