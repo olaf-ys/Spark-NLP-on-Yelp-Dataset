@@ -5,7 +5,7 @@ The Yelp dataset consists of 5 JSON files: business (113.4MB), review (4.98GB), 
 
 Data source: https://www.yelp.com/dataset/documentation/main
 
-# What I did
+## What I did
 **1. Research on third-party libraries**\
 Since our data contains 7 million reviews, NLP becomes the most important aspect of our analysis. However, Spark MLlib only offers limited and lower-level NLP features such as tokenizer, StopwordsRemover, etc. Applying higher-level NLP techniques with high efficiency becomes the biggest challenge in our project. After researching third-party libraries, I decided to use Spark NLP, which is an open-source NLP library developed by John Snow Labs. Spark NLP is built on top of Apache Spark and TensorFlow and offers a range of higher-level features such as normalizer, stemmer, lemmatizer, pre-trained language models, LLM embeddings, etc.
 
